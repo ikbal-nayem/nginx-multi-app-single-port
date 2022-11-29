@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  admin:
+    build:
+      context: ./admin
+      args:
+      - PUBLIC_URL=/admin
+    image: react-admin
+    networks:
+      - test
+
+  client:
+    build:
+      context: ./client
+      args:
+      - PUBLIC_URL=/client
+    image: react-client
+    networks:
+      - test
+
+  main:
+    build:
+      context: ./main
+      args:
+      - PUBLIC_URL=/
+    image: react-main
+    networks:
+      - test
+
+
+  gateway:
+    build:
+      context: ./gateway
+    image: react-multiapp
+    ports:
+      - 3333:80
+    networks:
+      - test
+    depends_on:
+      - main
+      - client
+      - admin
+
+networks:
+  test:
