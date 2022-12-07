@@ -11,7 +11,7 @@ docker-compose build
 ### Start Docker
 
 ```
-docker-compose up
+docker-compose up -d
 ```
 
 ### Stop Docker
