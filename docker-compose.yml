@@ -34,7 +34,7 @@ services:
       context: ./gateway
     image: gems/getway:project-gems
     ports:
-      - 3322:80
+      - 3333:80
     networks:
       - gems_net
     # depends_on:

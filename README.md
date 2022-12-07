@@ -19,6 +19,6 @@ docker-compose up -d
 docker-compose down
 ```
 
-- Main app: http://localhost:3333
-- Client app: http://localhost:3333/client
-- Admin app: http://localhost:3333/admin
+- Auth app: http://localhost:3333
+- ACL app: http://localhost:3333/client
+- EMS app: http://localhost:3333/admin
