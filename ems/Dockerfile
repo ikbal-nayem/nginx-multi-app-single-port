@@ -9,8 +9,8 @@ COPY . .
 
 ARG PUBLIC_URL
 
-RUN npm i
-RUN npm run build
+RUN yarn install
+RUN yarn build
 
 FROM nginx:1.17.7-alpine
 
