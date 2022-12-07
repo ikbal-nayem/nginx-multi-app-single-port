@@ -2,10 +2,6 @@ FROM node:16-alpine as builder
 
 WORKDIR /var/lib/app/
 COPY . .
-# COPY ./package.json ./
-# COPY ./package-lock.json ./
-# COPY ./src/ ./src
-# COPY ./public/ ./public
 
 ARG PUBLIC_URL
 

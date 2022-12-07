@@ -4,4 +4,5 @@ build
 Dockerfile
 .dockerignore
 .gitignore
+package-lock.json
 README.md
