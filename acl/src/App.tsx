@@ -10,7 +10,7 @@ function App() {
 				<p>
 					Edit <code>src/App.tsx</code> and save to reload.
 				</p>
-				<h3>Admin app</h3>
+				<h3>ACL module</h3>
 			</header>
 		</div>
 	);

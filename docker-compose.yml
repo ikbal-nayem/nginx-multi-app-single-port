@@ -6,7 +6,7 @@ services:
       context: ./auth
       args:
       - PUBLIC_URL=/
-    image: gems/auth
+    image: gems/auth:project-gems
     networks:
       - gems_net
 
@@ -15,7 +15,7 @@ services:
       context: ./acl
       args:
       - PUBLIC_URL=/acl
-    image: gems/acl
+    image: gems/acl:project-gems
     networks:
       - gems_net
 
@@ -24,7 +24,7 @@ services:
       context: ./ems
       args:
       - PUBLIC_URL=/ems
-    image: gems/ems
+    image: gems/ems:project-gems
     networks:
       - gems_net
 
@@ -32,15 +32,15 @@ services:
   gateway:
     build:
       context: ./gateway
-    image: gems/getway
+    image: gems/getway:project-gems
     ports:
       - 3322:80
     networks:
       - gems_net
-    depends_on:
-      - auth
-      - acl
-      - ems
+    # depends_on:
+    #   - auth
+    #   - acl
+    #   - ems
 
 networks:
-  gems_net: {}
+  gems_net:
